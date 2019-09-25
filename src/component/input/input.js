@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './Input.css';
+import './input.css';
 
 const Input = ({
                    id, className, label, error, ...attrs

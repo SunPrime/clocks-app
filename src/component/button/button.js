@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './Button.css';
+import './button.css';
 
 const Button = ({
                     children, onClick, className, disabled, active, invert, ...attrs

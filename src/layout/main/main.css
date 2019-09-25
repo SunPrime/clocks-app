@@ -4,3 +4,8 @@
     background: antiquewhite;
     display: flex;
 }
+
+.clock{
+    padding: 10px;
+    text-align: center;
+}
