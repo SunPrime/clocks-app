@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/clocks-app/static/css/main.b0982933.chunk.css",
-    "main.js": "/clocks-app/static/js/main.a7312793.chunk.js",
-    "main.js.map": "/clocks-app/static/js/main.a7312793.chunk.js.map",
+    "main.js": "/clocks-app/static/js/main.faded9f2.chunk.js",
+    "main.js.map": "/clocks-app/static/js/main.faded9f2.chunk.js.map",
     "runtime-main.js": "/clocks-app/static/js/runtime-main.9c116315.js",
     "runtime-main.js.map": "/clocks-app/static/js/runtime-main.9c116315.js.map",
     "static/css/2.1b53b9c3.chunk.css": "/clocks-app/static/css/2.1b53b9c3.chunk.css",
     "static/js/2.ec8491a8.chunk.js": "/clocks-app/static/js/2.ec8491a8.chunk.js",
     "static/js/2.ec8491a8.chunk.js.map": "/clocks-app/static/js/2.ec8491a8.chunk.js.map",
     "index.html": "/clocks-app/index.html",
-    "precache-manifest.6cc4f9e8193251f1a589f9f2548a6a62.js": "/clocks-app/precache-manifest.6cc4f9e8193251f1a589f9f2548a6a62.js",
+    "precache-manifest.a10f36091e824c2cbacc26f950e2e217.js": "/clocks-app/precache-manifest.a10f36091e824c2cbacc26f950e2e217.js",
     "service-worker.js": "/clocks-app/service-worker.js",
     "static/css/2.1b53b9c3.chunk.css.map": "/clocks-app/static/css/2.1b53b9c3.chunk.css.map",
     "static/css/main.b0982933.chunk.css.map": "/clocks-app/static/css/main.b0982933.chunk.css.map"
