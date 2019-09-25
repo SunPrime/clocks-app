@@ -21,12 +21,12 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        this.setState({
-            timeLondon: new Date(new Date().toLocaleString("en-US", {timeZone: "Europe/London"})),
-            timeKyiv: new Date(),
-            timeKathmandu: new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Kathmandu"})),
-        });
-        this.currentTime()
+        let currentDate = localStorage.getItem("app-clocks");
+        if (currentDate !== undefined){
+            this.currentCustomTime(new Date(currentDate))
+        } else {
+            this.currentTime()
+        }
     }
 
     componentWillUnmount() {
@@ -76,6 +76,7 @@ class Main extends Component {
         let newTime =  new Date(year, month, day, timeHours, timeMin);
         clearTimeout(this.flagSetInterval);
         this.currentCustomTime(newTime);
+        localStorage.setItem("app-clocks", newTime);
     }
 
     handleClick(event){
@@ -83,7 +84,8 @@ class Main extends Component {
         this.currentTime();
         this.setState({
             input: ""
-        })
+        });
+        localStorage.removeItem("app-clocks")
     }
 
     render() {
