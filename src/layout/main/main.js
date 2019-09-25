@@ -22,7 +22,7 @@ class Main extends Component {
 
     componentDidMount() {
         let currentDate = localStorage.getItem("app-clocks");
-        if (currentDate !== undefined){
+        if (currentDate !== null){
             this.currentCustomTime(new Date(currentDate))
         } else {
             this.currentTime()
