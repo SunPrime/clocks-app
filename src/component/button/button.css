@@ -1,14 +1,17 @@
 .btn {
     position: relative;
     padding: 10px 15px;
+    width: 200px;
     background-color: #7CC6fE;
+    border-radius: 5px;
     border: none;
     color: #FFF;
     font-weight: 600;
     cursor: pointer;
     text-transform: uppercase;
-    display: inline-block;
+    align-self: flex-end;
     text-decoration: none;
+    box-shadow: 0 0 2px 0 #C0C0C0;
 }
 
 .btn:hover {
