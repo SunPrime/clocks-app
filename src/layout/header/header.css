@@ -1,11 +1,11 @@
 .header {
     min-height: 50px;
     top: 0;
-    background-color: #D43728;
+    background-color: #5a89db;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 50px;
     color: #fff;
-    box-shadow: 1px 1px 10px #777;
+    box-shadow: 1px 10px 1px #777;
 }

@@ -1,7 +1,7 @@
 .main {
     padding: 25px 50px;
     min-height: calc(100vh - 150px);
-    background: antiquewhite;
+    background: whitesmoke;
     display: flex;
     flex-direction: column;
 }
