@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Certainly! Here is the professional **README.md** for your project in English.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 🌍 TimeSync Dashboard
 
-### `npm start`
+**TimeSync** is a modern, minimalist web application designed to track time across various time zones (London, Kyiv, Kathmandu). Built with **React 19** and **Vite**, it leverages **Tailwind CSS v4** to deliver a sleek, premium user experience.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ✨ Features
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* **Real-time Tracking**: Automatically updates time every second for all configured locations.
+* **Integrated Control Panel**: A unified capsule-style UI for toggling modes and setting custom times.
+* **Custom Time Mode**: Adjust the "base" time to instantly see the corresponding time shifts across other zones.
+* **Responsive & Fluid**: A mobile-first grid system that adapts perfectly to any screen size.
+* **Premium UI/UX**: Features glassmorphism, soft shadows, and high-fidelity typography (Roboto).
 
-### `npm test`
+## 🛠 Tech Stack
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* **Framework**: [React 19](https://react.dev/)
+* **Build Tool**: [Vite](https://vitejs.dev/)
+* **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+* **Key Libraries**:
+* `react-clock` — High-performance analog clock visualization.
+* `classnames` — Conditional CSS class management.
+* `@tailwindcss/vite` — Native Vite integration for the latest Tailwind engine.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/your-username/clocks-app.git
+cd clocks-app
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+### 3. Start the development server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+Open [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173) in your browser to see the result.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### 4. Build for production
 
-### Analyzing the Bundle Size
+```bash
+npm run build
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
 
-### Making a Progressive Web App
+## 📂 Project Structure
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```text
+src/
+├── component/        # Atomic components (Button, Input)
+├── layout/           # Major UI blocks (Header, Footer, Main)          # Static assets and icons
+├── App.jsx           # Root application component
+├── main.jsx          # Vite entry point
+└── index.css         # Global styles & Tailwind v4 configuration
 
-### Advanced Configuration
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## 🔧 Configuration
 
-### Deployment
+### Tailwind CSS v4
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+This project utilizes the latest **Tailwind v4** engine. Unlike previous versions, the configuration is handled primarily via CSS variables within `src/index.css` using the `@theme` directive.
 
-### `npm run build` fails to minify
+### Adding Time Zones
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+To add a new city, update the time zone array in `src/layout/main/main.jsx`. Use standard IANA time zone strings (e.g., `America/New_York`).
+
+---

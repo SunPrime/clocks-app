@@ -1,15 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Roboto", sans-serif;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-body * {
-  font-family: 'Roboto', sans-serif;
-  outline: none;
-}
-
-#root {
-  height: 100%;
-  overflow: hidden;
+    background-color: #f8fafc;
 }
