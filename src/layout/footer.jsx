@@ -1,19 +1,31 @@
+import React from "react";
+import pkg from "../../package.json";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-white border-t border-slate-100 py-10 mt-auto">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-slate-400 text-sm">
-          &copy; {currentYear} <span className="text-slate-600 font-semibold italic">sunprime</span>
+    <footer className="w-full bg-white border-t border-slate-100 py-6 mt-auto">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <div className="text-slate-400 text-xs flex items-center gap-1">
+          <span>&copy; {currentYear}</span>
+          <a
+            href="https://www.linkedin.com/in/elenavelytchenko/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-500 font-semibold hover:text-indigo-600 transition-colors duration-300 decoration-slate-200 underline-offset-4 hover:underline"
+          >
+            sunprime
+          </a>
         </div>
 
-        <div className="flex gap-6 items-center">
-          <div className="h-4 w-[1px] bg-slate-200"></div>
-          <p className="text-slate-400 text-sm flex items-center gap-1">
-            Made with <span className="text-rose-500 text-lg">♥</span>
-          </p>
+        <div className="flex items-center gap-4">
+          <div className="px-3 py-1 bg-slate-50 border border-slate-100 rounded-full text-slate-500 text-[10px] font-mono shadow-sm">
+            v {pkg.version}
+          </div>
         </div>
+
       </div>
     </footer>
   );

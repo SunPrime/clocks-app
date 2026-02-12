@@ -4,7 +4,7 @@ import Footer from "./layout/footer.jsx";
 
 const App = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col font-sans">
+    <div className="min-h-screen flex flex-col bg-slate-50 font-sans selection:bg-indigo-100 selection:text-indigo-900">
       <Header />
       <div className="flex-1">
         <Main>{children}</Main>

@@ -15,12 +15,15 @@ body {
 }
 
 .dark-clock .react-clock__face {
-    border-color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
 }
-.dark-clock .react-clock__hand__body,
-.dark-clock .react-clock__mark__body {
-    background-color: white !important;
+.dark-clock .react-clock__mark__body,
+.dark-clock .react-clock__hand__body {
+    background-color: rgba(255, 255, 255, 0.9) !important;
 }
-.dark-clock .react-clock__mark__number{
-    color: white !important;
+.dark-clock .react-clock__mark__number {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.dark-clock .react-clock__second-hand__body {
+    background-color: #ef4444 !important;
 }
