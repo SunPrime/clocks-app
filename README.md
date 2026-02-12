@@ -1,7 +1,3 @@
-Certainly! Here is the professional **README.md** for your project in English.
-
----
-
 # 🌍 TimeSync Dashboard
 
 **TimeSync** is a modern, minimalist web application designed to track time across various time zones (London, Kyiv, Kathmandu). Built with **React 19** and **Vite**, it leverages **Tailwind CSS v4** to deliver a sleek, premium user experience.
@@ -63,7 +59,7 @@ npm run build
 
 ```text
 src/
-├── component/        # Atomic components (Button, Input)
+├── component/        # Atomic components (Button, Input, Weather)
 ├── layout/           # Major UI blocks (Header, Footer, Main)          # Static assets and icons
 ├── App.jsx           # Root application component
 ├── main.jsx          # Vite entry point
