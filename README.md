@@ -1,7 +1,3 @@
-Certainly! Here is the professional **README.md** for your project in English.
-
----
-
 # 🌍 TimeSync Dashboard
 
 **TimeSync** is a modern, minimalist web application designed to track time across various time zones (London, Kyiv, Kathmandu). Built with **React 19** and **Vite**, it leverages **Tailwind CSS v4** to deliver a sleek, premium user experience.
