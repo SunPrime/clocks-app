@@ -1,6 +1,6 @@
-import Header from "./layout/header/header";
-import Main from "./layout/main/main";
-import Footer from "./layout/footer/footer";
+import Header from "./layout/header.jsx";
+import Main from "./layout/main.jsx";
+import Footer from "./layout/footer.jsx";
 
 const App = ({ children }) => {
   return (

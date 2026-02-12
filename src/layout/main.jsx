@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Clock from "react-clock";
-import Input from "../../component/input/input";
-import cities from "../../data/cities.json";
 import "react-clock/dist/Clock.css";
+import Input from "../component/input.jsx";
+import cities from "../data/cities.json";
+import Weather from "../component/weather.jsx";
 
 const Main = () => {
   const [selectedZones, setSelectedZones] = useState(() => {
@@ -71,8 +72,11 @@ const Main = () => {
   };
 
   const changeCity = (side, cityLabel) => {
-    const newCity = AVAILABLE_CITIES.find(c => c.label === cityLabel);
-    setSelectedZones(prev => ({ ...prev, [side]: newCity }));
+    const newCity = cities.find(c => c.label === cityLabel);
+
+    if (newCity) {
+      setSelectedZones(prev => ({ ...prev, [side]: newCity }));
+    }
   };
 
   const getDayNightInfo = (date) => {
@@ -107,21 +111,33 @@ const Main = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         {[
-          { id: 'kyiv', data: { label: "Kyiv" }, time: times.kyiv, canChange: true},
+          { id: 'kyiv', data: { label: "Kyiv" }, time: times.kyiv, canChange: false },
           { id: 'left', data: selectedZones.left, time: times.left, canChange: true },
           { id: 'right', data: selectedZones.right, time: times.right, canChange: true },
         ].map((slot) => {
           const { icon, isDay } = getDayNightInfo(slot.time);
 
+          const bgGradient = isDay
+            ? "bg-gradient-to-b from-amber-50 to-white shadow-orange-100/50"
+            : "bg-gradient-to-b from-indigo-600 to-slate-800 shadow-indigo-800/40";
+
+          const titleColor = isDay ? "text-slate-400" : "text-indigo-300";
+          const selectColor = isDay ? "text-slate-400 hover:text-indigo-600" : "text-indigo-200 hover:text-white";
+          const clockTheme = isDay ? "" : "dark-clock";
+
           return (
-            <div key={slot.id} className="bg-white p-10 rounded-[3.5rem] shadow-2xl shadow-slate-200/40 flex flex-col items-center justify-center min-h-[400px] transition-all hover:translate-y-[-5px] relative">
+            <div
+              key={slot.id}
+              className={`${bgGradient} p-10 rounded-[3.5rem] shadow-2xl flex flex-col items-center justify-center min-h-[450px] transition-all duration-700 hover:translate-y-[-5px] relative overflow-hidden`}
+            >
+              {!isDay && <div className="absolute inset-0 bg-white/5 pointer-events-none"></div>}
 
               {slot.canChange ? (
                 <div className="relative mb-4">
                   <select
                     value={slot.data.label}
                     onChange={(e) => changeCity(slot.id, e.target.value)}
-                    className="bg-transparent border-none text-slate-400 font-bold uppercase tracking-[0.2em] text-[10px] italic outline-none cursor-pointer hover:text-indigo-600 transition-colors text-center"
+                    className={`bg-transparent border-none font-bold uppercase tracking-[0.2em] text-[10px] italic outline-none cursor-pointer transition-colors text-center ${selectColor}`}
                   >
                     {cities.map(city => (
                       <option key={city.label} value={city.label} className="text-slate-900 bg-white capitalize">{city.label}</option>
@@ -129,7 +145,7 @@ const Main = () => {
                   </select>
                 </div>
               ) : (
-                <h3 className="text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 italic">
+                <h3 className={`${titleColor} font-bold uppercase tracking-[0.3em] text-[10px] mb-4 italic`}>
                   {slot.data.label}
                 </h3>
               )}
@@ -138,10 +154,16 @@ const Main = () => {
                 {icon}
               </div>
 
-              <div className="relative group">
-                <div className={`absolute inset-0 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity ${isDay ? 'bg-orange-400/10' : 'bg-indigo-900/10'}`}></div>
-                <Clock value={slot.time} size={200} renderNumbers={true} />
+              <div className={`relative group ${clockTheme}`}>
+                <div className={`absolute inset-0 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity ${isDay ? 'bg-orange-400/10' : 'bg-indigo-400/20'}`}></div>
+                <Clock
+                  value={slot.time}
+                  size={200}
+                  renderNumbers={true}
+                />
               </div>
+
+              <Weather city={slot.data.label} isDay={isDay} />
             </div>
           );
         })}

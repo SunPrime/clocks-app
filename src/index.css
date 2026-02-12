@@ -13,3 +13,14 @@ html, body, #root {
 body {
     background-color: #f8fafc;
 }
+
+.dark-clock .react-clock__face {
+    border-color: white !important;
+}
+.dark-clock .react-clock__hand__body,
+.dark-clock .react-clock__mark__body {
+    background-color: white !important;
+}
+.dark-clock .react-clock__mark__number{
+    color: white !important;
+}
