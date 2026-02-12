@@ -13,7 +13,7 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
           <div className="px-4 py-1.5 bg-slate-100 rounded-full text-slate-600 text-xs">
-            v2.0 Beta
+            v 2.0.1
           </div>
         </div>
       </div>
