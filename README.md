@@ -63,7 +63,7 @@ npm run build
 
 ```text
 src/
-├── component/        # Atomic components (Button, Input)
+├── component/        # Atomic components (Button, Input, Weather)
 ├── layout/           # Major UI blocks (Header, Footer, Main)          # Static assets and icons
 ├── App.jsx           # Root application component
 ├── main.jsx          # Vite entry point
