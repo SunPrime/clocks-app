@@ -6,9 +6,9 @@ const App = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans selection:bg-indigo-100 selection:text-indigo-900">
       <Header />
-      <div className="flex-1">
+      <main className="flex-1">
         <Main>{children}</Main>
-      </div>
+      </main>
       <Footer />
     </div>
   );

@@ -1,24 +1,24 @@
-import { useState, useEffect, useRef } from "react";
-import cities from "../data/cities.json";
+import { useState, useEffect, useRef, useCallback } from 'react';
+import cities from '../data/cities.json';
 
 export const useTimeSync = () => {
   const [selectedZones, setSelectedZones] = useState(() => {
-    const savedZones = localStorage.getItem("timesync_zones");
-    if (savedZones) {
-      try { return JSON.parse(savedZones); }
-      catch (e) { console.error("Error parsing zones", e); }
+    try {
+      const saved = localStorage.getItem("timesync_zones");
+      return saved ? JSON.parse(saved) : { left: cities[0], right: cities[4] };
+    } catch {
+      return { left: cities[0], right: cities[4] };
     }
-    return { left: cities[0], right: cities[4] };
   });
 
-  const calculateAllTimes = (baseDate, zones) => {
+  const calculateAllTimes = useCallback((baseDate, zones) => {
     const formatter = (zone) => new Date(baseDate.toLocaleString("en-US", { timeZone: zone }));
     return {
       left: formatter(zones.left.zone),
-      kyiv: formatter("Europe/Kiev"),
+      kyiv: formatter("Europe/Kyiv"),
       right: formatter(zones.right.zone),
     };
-  };
+  }, []);
 
   const [times, setTimes] = useState(() => calculateAllTimes(new Date(), selectedZones));
   const [input, setInput] = useState("");
@@ -30,29 +30,39 @@ export const useTimeSync = () => {
   }, [selectedZones]);
 
   useEffect(() => {
-    if (!isCustomTime) currentTimeRef.current = new Date();
-    const interval = setInterval(() => {
-      const nextDate = isCustomTime ? new Date(currentTimeRef.current.getTime() + 1000) : new Date();
+    const updateTime = () => {
+      const nextDate = isCustomTime
+        ? new Date(currentTimeRef.current.getTime() + 1000)
+        : new Date();
+
       currentTimeRef.current = nextDate;
       setTimes(calculateAllTimes(nextDate, selectedZones));
-    }, 1000);
+    };
+
+    const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
-  }, [isCustomTime, selectedZones]);
+  }, [isCustomTime, selectedZones, calculateAllTimes]);
 
   const handleInput = (e) => {
     const val = e.target.value;
     if (!val) return;
     setInput(val);
-    const [h, m] = val.split(":");
+
+    const [h, m] = val.split(":").map(Number);
     const newTime = new Date();
-    newTime.setHours(parseInt(h), parseInt(m), 0);
+    newTime.setHours(h, m, 0, 0);
+
     currentTimeRef.current = newTime;
     setIsCustomTime(true);
+    setTimes(calculateAllTimes(newTime, selectedZones));
   };
 
   const reset = () => {
     setIsCustomTime(false);
     setInput("");
+    const now = new Date();
+    currentTimeRef.current = now;
+    setTimes(calculateAllTimes(now, selectedZones));
   };
 
   const changeCity = (side, cityLabel) => {

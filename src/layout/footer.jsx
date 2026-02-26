@@ -1,5 +1,4 @@
-import React from "react";
-import pkg from "../../package.json";
+import { version } from '../../package.json';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +21,7 @@ const Footer = () => {
 
         <div className="flex items-center gap-4">
           <div className="px-3 py-1 bg-slate-50 border border-slate-100 rounded-full text-slate-500 text-[10px] font-mono shadow-sm">
-            v {pkg.version}
+            v{version}
           </div>
         </div>
 
