@@ -1,5 +1,14 @@
 # 🌍 TimeSync Dashboard
 
+# 🌍 TimeSync Dashboard
+
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite)
+![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=for-the-badge&logo=tailwind-css)
+![Vitest](https://img.shields.io/badge/Coverage-100%25-449d45?style=for-the-badge&logo=vitest)
+![Tests](https://github.com/SunPrime/countdown/actions/workflows/ci.yaml/badge.svg)
+![Version](https://img.shields.io/badge/version-2.0.2-blue)
+
 **TimeSync** is a modern, minimalist web application designed to track time across various time zones (London, Kyiv, Kathmandu). Built with **React 19** and **Vite**, it leverages **Tailwind CSS v4** to deliver a sleek, premium user experience.
 
 ## ✨ Features
@@ -13,14 +22,13 @@
 ## 🛠 Tech Stack
 
 * **Framework**: [React 19](https://react.dev/)
-* **Build Tool**: [Vite](https://vitejs.dev/)
+* **Build Tool**: [Vite 7](https://vitejs.dev/)
 * **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+* **Data**: Open-Meteo API
+* **Testing**: Vitest, React Testing Library
 * **Key Libraries**:
 * `react-clock` — High-performance analog clock visualization.
-* `classnames` — Conditional CSS class management.
 * `@tailwindcss/vite` — Native Vite integration for the latest Tailwind engine.
-
-
 
 ## 🚀 Getting Started
 
