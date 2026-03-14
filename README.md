@@ -1,6 +1,4 @@
-# 🌍 TimeSync Dashboard
-
-# 🌍 TimeSync Dashboard
+# TimeSync Dashboard
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite)
@@ -11,7 +9,7 @@
 
 **TimeSync** is a modern, minimalist web application designed to track time across various time zones (London, Kyiv, Kathmandu). Built with **React 19** and **Vite**, it leverages **Tailwind CSS v4** to deliver a sleek, premium user experience.
 
-## ✨ Features
+## Features
 
 * **Real-time Tracking**: Automatically updates time every second for all configured locations.
 * **Integrated Control Panel**: A unified capsule-style UI for toggling modes and setting custom times.
@@ -19,7 +17,7 @@
 * **Responsive & Fluid**: A mobile-first grid system that adapts perfectly to any screen size.
 * **Premium UI/UX**: Features glassmorphism, soft shadows, and high-fidelity typography (Roboto).
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **Framework**: [React 19](https://react.dev/)
 * **Build Tool**: [Vite 7](https://vitejs.dev/)
@@ -30,7 +28,7 @@
 * `react-clock` — High-performance analog clock visualization.
 * `@tailwindcss/vite` — Native Vite integration for the latest Tailwind engine.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -63,7 +61,7 @@ npm run build
 
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 src/
@@ -75,7 +73,7 @@ src/
 
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Tailwind CSS v4
 
