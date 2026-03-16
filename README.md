@@ -4,8 +4,8 @@
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite)
 ![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=for-the-badge&logo=tailwind-css)
 ![Vitest](https://img.shields.io/badge/Coverage-100%25-449d45?style=for-the-badge&logo=vitest)
-![Tests](https://github.com/SunPrime/countdown/actions/workflows/ci.yaml/badge.svg)
-![Version](https://img.shields.io/badge/version-2.0.2-blue)
+![Tests](https://github.com/SunPrime/clocks-app/actions/workflows/ci.yaml/badge.svg)
+![Version](https://img.shields.io/github/package-json/v/SunPrime/clocks-app)
 
 **TimeSync** is a modern, minimalist web application designed to track time across various time zones (London, Kyiv, Kathmandu). Built with **React 19** and **Vite**, it leverages **Tailwind CSS v4** to deliver a sleek, premium user experience.
 
